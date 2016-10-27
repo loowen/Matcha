@@ -1,0 +1,43 @@
+nav li {
+    float: left;
+    border-right:1px solid black;
+}
+
+nav ul{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li:last-child {
+    border-right: none;
+    border-left:1px solid black;
+}
+
+nav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 25px 16px; 
+    text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+    background-color:rgba(245,226,220,1);
+}
+
+nav li:last-child a:hover:not(.active) {
+    background-color: rgba(245,226,220,1);
+    border-radius: 0px 10px 0 0;
+}
+
+nav li .active {
+    background-color: rgba(245,226,220,1);
+}
+
+nav li:first-child .active {
+    background-color: rgba(245,226,220,1);
+     border-radius: 10px 0px 0 0;
+}
