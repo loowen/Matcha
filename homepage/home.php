@@ -32,9 +32,13 @@
      <li><a href="../myaccount.php">Account</a></li>
   </ul>
 </nav></center>
-    
+    <br>
 <center><section>
-    
+
+
+<br></br>
+<br></br>
+<br></br>
 <footer>:D</footer>
 </section></center>
 
