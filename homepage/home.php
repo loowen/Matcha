@@ -7,8 +7,15 @@
     ?> -->
 <title>Pic Snap :D</title>
 <head>
-  <link rel="Stylesheet" type="text/css" href="home.css">
-  <link rel="Stylesheet" type="text/css" href="../nav.css">
+
+    	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+
+   <link rel="Stylesheet" type="text/css" href="home.css">
+<link rel="Stylesheet" type="text/css" href="../homebar.css">
   <link rel="shortcut icon" url("srcimg/cherry.png")/>
         <br>
 
@@ -19,15 +26,16 @@
 
 <center><section>
 <center><header>
-
-<nav>
+<nav class="home">
     <ul>
-    <li><a class="active" href="#home">Home</a></li>
+    <li class="active"><a href="#home">Home</a></li>
     <li><a href="./gallery.php">Gallery</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li style="float:right"><a href="./logout.php">My Account</a></li>
-    </ul>
+    <li style="float:right"><a href="#contact">My account</a></li>
+    
+        
 </nav>
+
 </header></center>
 <br></br>
 <aside method="POST" action="loginuser.php">
