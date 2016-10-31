@@ -4,7 +4,25 @@ body
     width: 100%;
     position: absolute;
     background-image: url("srcimg/background.jpg");
-    background-repeat: none;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+form {
+  background: white;
+  left: 50%;
+  width: 40%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+  font-family: lato;
+  color: #333;
+  border-radius: 10px;
+
+   position: absolute;
+top: 25%;
+margin-left:-250px;
+width: 45vh;
 }
 
 button:link {
@@ -58,9 +76,9 @@ li a:hover:not(.active) {
 }
 
 form header {
-  background: rgba(2, 162, 252, 1);
+  background: red;
   padding: 30px 20px;
-  color: white;
+  color: black;
   font-size: 1.2em;
   font-weight: 600;
   border-radius: 10px 10px 0 0;
@@ -126,7 +144,7 @@ form a {
   transform: translate(-50%, 0);
   font-family: inherit;
   color: white;
-  background:#FF3838;
+  background:red;
   font-size: 1.3em;
   font-weight: 400;
   border-radius: 3px;

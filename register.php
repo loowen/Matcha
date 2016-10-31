@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<br>
-<br>
-<br>
-    <h1><center><font-family:"Times New Roman", Times, serif color=white>Pic Snap</font></center></h1> 
+<br/>
+<br/>
+<br/>
+    <h1><center><font font-family:"Times New Roman", Times, serif color=white>Pic Snap</font></center></h1> 
     <title>login</title>
-    <link rel="Stylesheet" type="text/css" href="login.css">
+    <link rel="Stylesheet" type="text/css" href="homepage/home.css"/>
 </head>
     <body>
 
@@ -35,7 +35,7 @@
 <label>Confirm Password</label>
 <input type="password" name="confpass">
 
-<div class="help">Use upper and lowercase lettes as well</div>
+<div class="help">Use upper and lowercase letters as well</div>
 <?php
     if ($_GET['err'] == 1)
     {
