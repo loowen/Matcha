@@ -20,7 +20,7 @@
     </nav>
     
 <form method="POST" action="reguser.php">
-<header>Cange Password</header>
+<header>Change Password</header>
 
 <label>Username</label>
 <input type="text" name="username">

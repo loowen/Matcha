@@ -5,6 +5,8 @@ include "connect.php";
 $email = $_POST['email'];
 $username = $_POST['username'];
 $password = $_POST['password'];
+$age = $_POST['Age'];
+$gender = $_POST['Gend'];
 $hshed = hash("whirlpool", $password);
 $code = uniqid();
 
@@ -42,6 +44,8 @@ if ($password != $_POST['confpass'])
     echo "ERROR";
     header("Location: register.php?err=4");
 }
+
+if($age)
 echo" test ";
 $stmt = $pdo->prepare("INSERT INTO `usertable` ( `username`, `password`, `email`, `code`, `active`)
     VALUES (:username, :password, :email, :code, :active)");

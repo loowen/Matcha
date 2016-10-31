@@ -18,7 +18,7 @@
 
 <section>
 
-<form method="POST" action="loginuser.php">
+<form method="POST" action="reguser.php">
 <center><header>Register</header></center>
 <label>Username</label>
 <div class="help">At least 6 characters</div>
@@ -42,9 +42,8 @@ if($_GET["err"] == 1)
 <div class="help">Use upper and lowercase letters as well</div>
 <label>Password</label>
 <input name="pword" type="password">
-<button style="float:left; margin-left: 60px" type="submit" name="submit" value="OK" class="button">Login</button>
-
-<a href="register.php" class="button" style="float:right; padding: 3px">Register</a>
+<button style="float:right; padding: 3px" type="submit" name="submit" value="OK" class="button">Register</button>
+<a href="register.php" class="button" style="float:left; margin-left: 60px">Login</a>
 </form>
 </section>
 

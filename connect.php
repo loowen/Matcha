@@ -4,7 +4,7 @@ function connect()
 {
     $dbhost = "mysql:host=127.0.0.1;";
     $dbuser = "root";
-    $dbpass = "JaLg2wV5";
+    $dbpass = "15hamllu";
     try
     {
         $pdo = new PDO($dbhost, $dbuser, $dbpass);
