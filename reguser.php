@@ -7,8 +7,10 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 $age = $_POST['Age'];
 $gender = $_POST['Gend'];
+$sexpref= $_POST['Pref'];
+$first=$_POST['first'];
+$last=$_POST['last'];
 $hshed = hash("whirlpool", $password);
-$code = uniqid();
 
 echo "user = $username  pass $hshed <br>";
 
@@ -24,42 +26,65 @@ echo $stmt->rowCount();
 if ($stmt->rowCount() > 0)
 {
     echo "ERROR";
-    header("Location: register.php?err=1");
+    header("Location: index.php?err=1");
 }
 
 if (strlen($password) < 6)
 {
     echo "ERROR";
-    header("Location: register.php?err=2");
+    header("Location: index.php?err=2");
 }
 
 if (strlen($username) < 6)
 {
     echo "ERROR";
-    header("Location: register.php?err=3");
+    header("Location: index.php?err=3");
 }
 
 if ($password != $_POST['confpass'])
 {
     echo "ERROR";
-    header("Location: register.php?err=4");
+    header("Location: index.php?err=4");
 }
 
-if($age)
-echo" test ";
-$stmt = $pdo->prepare("INSERT INTO `usertable` ( `username`, `password`, `email`, `code`, `active`)
-    VALUES (:username, :password, :email, :code, :active)");
+if(!isset($gender) || !isset($sexpref))
+{
+    header("Location: index.php?err=5");
+}
+
+if($age < 18)
+{
+    header("Location: index.php?err=6");
+}
+
+if (!pregmatch('/^([a-zA-Z0-9.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/', $email))
+{
+    header("Location: /index.php?err=8");
+}
+
+if(!isset($first) || !isset($last))
+{
+    header("Location: index.php?err=8");
+}
+
+$stmt = $pdo->prepare("INSERT INTO `users` ( `Username`, `password`, `email`, `Firstname`, `Lastname`)
+    VALUES (:username, :password, :email, :first, :last)");
 echo" prepare ";
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':username', $username);
     $stmt->bindParam(':password',$hshed);
-    $stmt->bindParam(':code',$code);
-    $active="0";
-    $stmt->bindParam(':active', $active);
+    $stmt->bindParam(':first',$first);
+    $stmt->bindParam(':last', $last);
     echo" code ";
     $stmt->execute();
     echo" executed ";
-    $pdo = null;
+    $stmt=$pdo->query("INSERT INTO `profiles` ( `Username`, `Age`, `Gender`, `SexualPref`)
+        VALUES (:username, :age, :gender, :sexpref)");
+    $stmt->bindParam(':username', $username);
+    $stmt->bindParam(':age', $age);
+    $stmt->bindParam(':gender', $gender);
+    $stmt->bindParam(':sexpref', $sexpref);
+    $stmt->execute();
     $subject="Pic Snap Acc Verify";
     $message="Please click the link to verify your account: http://localhost:8080/camagru/verify.php?name=$username&pword=$hshed&code=$code";
     mail($email,$subject,$message);
