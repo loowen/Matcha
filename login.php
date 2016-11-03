@@ -6,7 +6,7 @@
 <br>
     <h1><center><font-family:"Times New Roman", Times, serif color=white>Pic Snap</font></center></h1> 
     <title>login</title>
-    <link rel="Stylesheet" type="text/css" href="login.css">
+    <link rel="Stylesheet" type="text/css" href="css/login.css"/>
 </head>
     <body>
 
@@ -41,7 +41,7 @@ if($_GET["err"] == 1)
 <!-- <button style="float:left; margin-left: 60px";>Login</button> -->
 <a href="register.php" class="button" style="float:right; padding: 3px">Register</a>
 <br></br>
-<a href="reset.php">Forgot Password?</a>
+<a href="Not Used/reset.php">Forgot Password?</a>
 </form>
 
 <footer>

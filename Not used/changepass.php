@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<br/>
-<br/>
-<br/>
-    <h1><center><font font-family:"Times New Roman", Times, serif color=white>Pic Snap</font></center></h1> 
+<br>
+<br>
+<br>
+    <h1><center><font-family:"Times New Roman", Times, serif color=white>Pic Snap</font></center></h1> 
     <title>login</title>
-    <link rel="Stylesheet" type="text/css" href="homepage/home.css"/>
+    <link rel="Stylesheet" type="text/css" href="login.css">
 </head>
     <body>
 
@@ -19,23 +19,22 @@
     </ul>
     </nav>
     
-<form method="POST" action="backend/reguser.php">
-<header>Register</header>
+<form method="POST" action="reguser.php">
+<header>Change Password</header>
 
 <label>Username</label>
 <input type="text" name="username">
-<div class="help">At least 6 character</div>
 
 <label>Email</label>
 <input type="email" name="email">
 
-<label>Password</label>
+<label>Old Password</label>
 <input type="password" name="password">
 
-<label>Confirm Password</label>
+<label>New Password</label>
 <input type="password" name="confpass">
 
-<div class="help">Use upper and lowercase letters as well</div>
+<div class="help">Use upper and lowercase lettes as well</div>
 <?php
     if ($_GET['err'] == 1)
     {
@@ -54,7 +53,9 @@
         echo "Passwords do not match";
     }
 ?>
-<button style="float:left; margin-left: 60px">register</button>
+<br></br>
+<center><a href="register.php" class="button">Reset Password</a></center>
+<br></br>
 </form>
 
 </body>
