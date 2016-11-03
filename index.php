@@ -8,6 +8,8 @@
 <title>Pic Snap :D</title>
 <head>
   <link rel="Stylesheet" type="text/css" href="index.css">
+    <link rel="Stylesheet" type="text/css" href="profileprev.css">
+
   <link rel="shortcut icon" url="cherry.png"/>
         <br>
 <h1><center><font style="font-family:Chopin Script, Arial;" color=black>Matcha</font></center></h1> 

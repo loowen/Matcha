@@ -11,18 +11,20 @@ body
 
 
 form {
+
+margin-left: 15%;
+margin-right:15%;
+width: 70%;
+
   background: white;
-  left: 50%;
-  width: 40%;
+
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
   font-family: lato;
   color: #333;
   border-radius: 10px;
 
-   position: absolute;
-top: 25%;
-margin-left:-250px;
-width: 45vh;
+position: absolute;
+top: 10%;
 }
 
 button:link {
@@ -36,45 +38,6 @@ a:link
     text-decoration: none;
 }
 
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-nav li {
-    float: left;
-    border-right:1px solid #bbb;
-    list-style-type: none;
-    padding: 0;
-}
-
-li:last-child {
-    border-right: none;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color: #111;
-}
-
-.active {
-    background-color: #4CAF50;
-}
-
 form header {
   background: red;
   padding: 30px 20px;
@@ -86,16 +49,9 @@ form header {
 form label {
   margin-left: 20px;
   display: inline-block;
-  margin-top: 30px;
-  margin-bottom: 5px;
+  margin-top: 20px;
+  /*margin-bottom: 5px; */
   position: relative;
-}
-form label span {
-  color: rgba(2, 162, 252, 1);
-  font-size: 2em;
-  position: absolute;
-  left: 2.3em;
-  top: -10px;
 }
 form input {
 
@@ -157,7 +113,7 @@ form button:hover {
   background: #ff5252;
 }
 
-#footer 
+/*#footer 
 {
     clear: both;
     position: absolute;
@@ -165,4 +121,106 @@ form button:hover {
     height: 3em;
     top: 0;
     margin-top: -3em;
+}*/
+
+
+.container{
+  display: block;
+  position: relative;
+  margin: auto;
+/*  height: 100px;
+  width: 100px;
+ bottom: 0; left:0; right: 0; top:0; */
+  padding: 0;
+}
+
+h2 {
+	color: #AAAAAA;
+	font-weight: normal;
+}
+
+.container ul{
+  list-style: none;
+  /*height: 100%;
+  width: 100%;*/ 
+  margin: 0;
+  padding: 0;
+}
+
+
+ul li{
+  color: #AAAAAA;
+  display: block;
+  position: relative;
+  float: left;
+/*width: 100%; */
+/*height: 100px; */
+	/*border-bottom: 1px solid black; */
+}
+
+
+ul li input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+}
+
+ul li label{
+  display: block;
+  position: relative;
+/*font-weight: 300;
+  font-size: 1.35em;*/
+  padding: 25px 0px 25px 80px;
+ margin: 10px auto;
+  height: 0px;
+  /*z-index: 9;*/
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+
+ul li:hover label{
+	color:black;
+}
+
+ul li .check{
+  display: block;
+  position: absolute;
+  border: 5px solid #AAAAAA;
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+top: 20px;
+  left: 20px;
+	z-index: 5;
+	transition: border .25s linear;
+	-webkit-transition: border .25s linear;
+}
+
+ul li:hover .check {
+  border: 5px solid black;
+}
+
+ul li .check::before {
+  display: block;
+  position: absolute;
+	content: '';
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  top: 5px;
+	left: 5px;
+  margin: auto;
+	transition: background 0.25s linear;
+	-webkit-transition: background 0.25s linear;
+}
+
+input[type=radio]:checked ~ .check {
+  border: 5px solid #0DFF92;
+}
+
+input[type=radio]:checked ~ .check::before{
+  background: #0DFF92;
+}
+
+input[type=radio]:checked ~ label{
+  color: #0DFF92;
 }

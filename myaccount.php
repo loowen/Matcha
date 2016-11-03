@@ -7,11 +7,10 @@
     ?> -->
 <title>Pic Snap :D</title>
 <head>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.min.css" rel="Stylesheet">
-	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 
    <link rel="Stylesheet" type="text/css" href="homepage/home.css">
@@ -45,7 +44,8 @@
           <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
           <h6>Upload a different photo...</h6>
           
-          <input type="file" class="form-control">
+          <input id="image1" type="file" class="form-control">           
+          <input type="button" class="form-control" value="Upload Photo" onclick="userUpload()">
         </div>
       </div>
       
@@ -120,7 +120,7 @@
 <footer>:D</footer>
 </section></center>
 
-
+<script type="text/javascript" src="functions.js"></script>
 </body>
 
 

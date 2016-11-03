@@ -7,6 +7,8 @@
     ?> -->
 <title>Pic Snap :D</title>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/jquery.min.js"></script>
   <link rel="Stylesheet" type="text/css" href="login.css"/>
   <link rel="shortcut icon" url="cherry.png"/>
         <br/>
@@ -15,7 +17,7 @@
 </head>
 <body>
 
-<section>
+<!-- <center><section> -->
 
 <form method="POST" action="reguser.php">
 <center><header>Register</header></center>
@@ -26,8 +28,57 @@
 <input name="username" type="text">
 <label>Last Name</label>
 <input name="username" type="text">
-<label>Age</label>
+<label style="width: 100%">Gender</label>
+
+<div class="container">	
+  <ul>
+  <li>
+    <input type="radio" id="a-option" name="selector">
+    <label for="a-option">Male</label>
+    
+    <div class="check"></div>
+  </li>
+  
+  <li>
+    <input type="radio" id="b-option" name="selector">
+    <label for="b-option">Female</label>
+    
+    <div class="check"><div class="inside"></div></div>
+  </li>
+  
+</ul>
+</div>
+
+<label style="width: 100%">Sexual Preferance</label>
+
+<div class="container">	
+  <ul>
+  <li>
+    <input type="radio" id="c-option" name="selector2">
+    <label for="c-option">Male</label>
+    
+    <div class="check"></div>
+  </li>
+  
+  <li>
+    <input type="radio" id="d-option" name="selector2">
+    <label for="d-option">Bisexual</label>
+    
+    <div class="check"><div class="inside"></div></div>
+  </li>
+  
+  <li>
+    <input type="radio" id="e-option" name="selector2">
+    <label for="e-option">Female</label>
+    
+    <div class="check"><div class="inside"></div></div>
+  </li>
+</ul>
+</div>
+
+<label style="width: 100%">Age</label>
 <input name="username" type="number">
+
 <!--if($_GET["err"] == 1)
 {
     echo"<div class='help' style='color:red;'>";
@@ -37,13 +88,17 @@
 <label>Password</label>
 <input name="pword" type="password"/>
 <div class="help">Use upper and lowercase letters as well</div>
-<label>Password</label>
+<label> confirm Password</label>
 <input name="pword" type="password"/>
+
 <a href="login.php" class="button" style="float:left; margin-left: 60px" type="submit" name="submit" value="OK" class="button">Login</a>
 
 <button style="float:right; padding: 3px">Register</button>
+
+
+
 </form>
-</section>
+<!-- </section> -->
 
 
     
@@ -58,7 +113,6 @@
 
 <br/>
 </div>
-
 </body>
 
 
